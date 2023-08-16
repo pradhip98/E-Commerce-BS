@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js" defer></script>
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/jquery-3.6.4.min.js"></script>
+    <link href="./cart.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- This is header -->
+    <header class="container-fluid header bg-primary">
+        <div class="d-flex justify-content-around align-items-center">
+            <h3><a href="/cart.html" class="navbar-brand">Brand Name</a></h1>
+                <div class="search-bar">
+                    <input type="text" class="form-control px-lg-5" id="name" placeholder="Search Products"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </div>
+                <!-- <button data-toggle="collapse" data-target="#pages" class="btn btn-info">
+                    __
+                </button> -->
+                <ul class="nav" id="pages">
+                    <li><a class="nav-link remove-link">Home <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 576 512">
+                                <path
+                                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                            </svg>
+                    <li><a id="myaccount" class="nav-link link">My Account <svg xmlns="http://www.w3.org/2000/svg"
+                                height="15px" viewBox="0 0 448 512">
+                                <path
+                                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                            </svg></a></li>
+                    <li><a class="nav-link link">Cart <svg xmlns="http://www.w3.org/2000/svg" height="15px"
+                                viewBox="0 0 576 512">
+                                <path
+                                    d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                            </svg></a></li>
+                    <li><a class="nav-link link">More <svg xmlns="http://www.w3.org/2000/svg" height="15px"
+                                viewBox="0 0 320 512">
+                                <path
+                                    d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                            </svg></a></li>
+                </ul>
+        </div>
+    </header>
+    <!-- End of header -->
+
+   <!--This is nav bar-->
+    <nav class="container-fluid bg-light">
+        <ul class="nav justify-content-between container">
+            <li><a class="nav-link">Electronics</a></li>
+            <li><a class="nav-link">Furniture</a></li>
+            <li><a class="nav-link">Mobile</a></li>
+            <li><a class="nav-link">Footwear</a></li>
+            <li><a class="nav-link">Vegetable</a></li>
+            <li><a class="nav-link">Toys</a></li>
+            <li><a class="nav-link">Wearables</a></li>
+            <li><a class="nav-link">Grocery</a></li>
+        </ul>
+    </nav>
+    <!--End is nav bar-->
+
+    <!-- This is Home -->
+    <article class="home container-fluid mt-1">
+         <!-- This is slider -->
+        <section>
+        <div class="slider">
+            <div class="slider-image fader">
+                <img src="./images/Smart Phones.jpg" width="100%">
+                <button class="btn1">View More</button>
+            </div>
+
+            <div class="slider-image fader">
+                <img src="./images/Fashion & Style.jpg" width="100%">
+                <button class="btn2">View More</button>
+            </div>
+
+            <div class="slider-image fader">
+                <img src="./images/Casual Shoes.jpg" width="100%">
+                <button class="btn3">View More</button>
+            </div>
+
+            <div style="text-align:center" class="dot-div">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+        <!-- End of Slider -->
+
+         <!-- this is products section -->
+    <section class="products">
+        <div class="border py-4 my-2">
+        <div class="nav navbar-nav" id="contents">
+            <div class="mx-lg-2 mx-sm-1 ">
+                <a href=""><img src="./images2/smart-phone.jpg" alt="Grocery.png" width="100%" ><br>Smart Phone</a>
+            </div>
+            <div class="mx-lg-2 mx-sm-1">
+                <a href=""><img src="./images2/beartrimmer-new.jpg" alt="Grocery.png" width="100%"><br>Trimmer</a>
+
+            </div>
+             <div class="mx-lg-2 mx-sm-1">
+                <a href=""><img src="./images2/Grocery-new.jpg" alt="Grocery.png" width="100%"><br>Grocery</a>
+
+            </div>
+            <div class="mx-lg-2 mx-sm-1">
+                <a href=""><img src="./images2/scandinavian-living-room-interior-design-zoom-background.jpg"
+                        alt="Grocery.png" width="100%"><br>Furniture</a>
+
+            </div>
+            <div class="mx-lg-2 mx-sm-1"> <a href=""> <img src="./images2/Home-appliances.jpg" alt="Grocery.png"
+                        width="100%"><br>Home appliance</a>
+            </div>
+            <div class="mx-lg-2 mx-sm-1">
+                <a href=""><img src="./images2/pxfuel (3).jpg" alt="Grocery.png" width="100%"><br>Casual Shoes</a>
+
+            </div>
+            <div class="mx-lg-2 mx-sm-1">
+                <a href=""><img src="./images2/healthy-vegetables-old-dark-background.jpg" alt="Grocery.png"
+                        width="100%"><br>Vegetables</a>
+
+            </div>
+            <div class="mx-lg-2 mx-sm-1">
+                  <a href=""><img src="./images2/33665927_m010t0561_e_banner_20oct22.jpg" alt="Grocery.png" width="100%"><br>Today
+                    Deals</a>
+             </div>
+        </div>
+    </div>
+    </section>
+    <!-- End of Product section -->
+
+    <!-- This is deals section -->
+    <section class="deals">
+        <div class="row">
+            <div class="col-12 text-white mb-2">
+                <div class="bg-danger text-center position-relative py-sm-3 mysm--2">
+                    <h3 class="me-2">Deals of the Day</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 384 512" class="deals-svg">
+                        <path
+                            d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64V75c0 42.4 16.9 83.1 46.9 113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32 32s14.3 32 32 32H64 320h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V437c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320 64 32zM96 75V64H288V75c0 19-5.6 37.4-16 53H112c-10.3-15.6-16-34-16-53zm16 309c3.5-5.3 7.6-10.3 12.1-14.9L192 301.3l67.9 67.9c4.6 4.6 8.6 9.6 12.1 14.9H112z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card mb-2">
+                    <img src="./images2/Deals/Boom headphone1.jpg" width="100%" height="300px">
+                    <div class="pb-md-2">
+                        <div class="card-header text-center">
+                            <h4>Boom Head Phone</h4>
+                        </div>
+                        <ul class="navbar-nav my-md-1 mx-md-4">
+                            <li>Actual Price:Rs.<del>2999</del></li>
+                            <li>Offer Price:Rs.1999</li>
+                        </ul>
+                        <a class="btn btn-outline-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-2">
+                    <img src="./images2/Deals/coolingClass1-small.jpg" width="100%" height="300px">
+                    <div class="pb-md-2">
+                        <div class="card-header text-center">
+                            <h4>Sunglass</h4>
+                        </div>
+
+                        <ul class="navbar-nav my-md-1 mx-md-4">
+                            <li>Actual Price:Rs.<del>999</del></li>
+                            <li>Offer Price:Rs.199</li>
+                        </ul>
+                        <a class="btn btn-outline-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card mb-2">
+                    <img src="./images2/Deals/smartwatch1-normal.jpg" alt="" width="100%" height="300px">
+                    <div class="pb-sm-2">
+                        <div class="card-header text-center">
+                            <h4>Smart Watch</h4>
+                        </div>
+                        <ul class="navbar-nav my-md-1 mx-md-4">
+                            <li>Actual Price:Rs.<del>5999</del></li>
+                            <li>Offer Price:Rs.2999</li>
+                        </ul>
+                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-2">
+                    <img src="./images2/Deals/sports-shoe2-small.jpg" width="100%" height="300px">
+                    <div class="pb-sm-2">
+                        <div class="card-header text-center text-center">
+                            <h4>Sport shoe</h4>
+                        </div>
+                        <ul class="navbar-nav my-md-1 mx-md-4">
+                            <li>Actual Price: Rs.<del>1999</del></li>
+                            <li>Offer Price: Rs.599</li>
+                        </ul>
+                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4">
+                <div class="card mb-2">
+                    <img src="./images2/Deals/tws1.jpg" width="100%" height="300px">
+                    <div class="pb-sm-2">
+                        <div class="card-header text-center">
+                            <h4>True Wireless pods</h4>
+                        </div>
+                        <ul class="navbar-nav my-md-1 mx-md-4">
+                            <li>Actual Price:Rs.<del>5499</del></li>
+                            <li>Offer Price:Rs.1499</li>
+                        </ul>
+                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-2">
+                    <img src="./images2/Deals/woolen-jacket1-small.jpg" width="100%" height="300px">
+                    <div class="pb-sm-2">
+                        <div class="card-header text-center">
+                            <h4>Woolen-jacket</h4>
+                        </div>
+                        <ul class="navbar-nav my-md-1 mx-md-4">
+                            <li>Actual Price:Rs.<del>1999</del></li>
+                            <li>Offer Price:Rs.999</li>
+                        </ul>
+                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Deals Section -->
+
+    <!-- This is footer -->
+    <footer class="bg-dark text-center">
+        <div class="row mx-5">
+            <div class="col-sm-4 col-3 my-sm-3 my-2">
+                <h5>ABOUT</h5>
+                <ul class="">
+                    <li><a href="" class="btn">Contact Us</a></li>
+                    <li><a href="" class="btn">About Us</a></li>
+                    <li><a href="" class="btn">Corporate Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 col-3 my-sm-3 my-2">
+                <h5>HELP</h5>
+                <ul class="">
+                    <li><a href="" class="btn">Payments</a></li>
+                    <li><a href="" class="btn">Shipping</a></li>
+                    <li><a href=""class="btn">Cancellation & Returns</a></li>
+                    <li><a href="" class="btn">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 col-3 my-sm-3 my-2">
+                <h5>CONSUMER5POLICY</h5>
+                <ul class="">
+                    <li><a href="" class="btn">Cancellation & Returnss</a></li>
+                    <li><a href="" class="btn">Terms of Use</a></li>
+                    <li><a href="" class="btn">Security</a></li>
+                    <li><a href="" class="btn">Privacy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 col-3 my-sm-3 my-2">
+                <h5>SOCIAL</h5>
+                <ul class="">
+                    <li><a href="" class="btn">Facebook</a></li>
+                    <li><a href="" class="btn">Twitter</a></li>
+                    <li><a href="" class="btn">YouTube</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-sm-4 col-3 my-sm-3 my-2">
+                <h5>Mail Us:</h5>
+                <ul class="">
+                    <li>Brand Name limited,<br>
+                        building Name,<br>
+                        Town Name,<br>
+                        Distict Name,Pincode,<br>
+                        State Name,Country Name.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 col-3 my-sm-3 my-2">
+                <h5>Registerd office address</h5>
+                <ul class="">
+                    <li>Brand Name limited,<br>
+                        building Name,<br>
+                        Town Name,<br>
+                        Distict Name,Pincode,<br>
+                        State Name,Country Name.<br>
+                        Telephone:
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="pb-3 mail">
+            <h6>2020-2025 brandname.com</h6>
+        </div>
+    </footer>
+    <!-- End of footer -->
+
+    </article>
+    <!-- End of Home -->
+
+
+    <!-- This is sign-in form -->
+    <div class="form container bg-default">
+        <form class="sign-in pt-5">
+            <div>
+                <h2 style="text-align:center;color:blue;text-decoration:underline">Sign in</h2>
+            </div>
+            <div class="form-group pb-4">
+                <label for="uname">Username</label width="100%"><br>
+                <input type="text" placeholder="Enter Your username" id="uname" class="form-control">
+                 
+            </div>
+            <div class="form-group pb-4">
+                <label for="userpass">Password</label width="100%"><br>
+                <input type="password" placeholder="Enter Your Password" id="userpass" class="form-control">
+               
+            </div>
+
+            <div class="pb-4 text-center">
+                <a class="btn btn-success px-5">Submit</a>
+            </div>
+
+            <ul class="nav">
+                <li>New to Brand name ?</li>
+                <li><a href="#" class="signup">Sign Up</a></li>
+            </ul>
+
+
+            <!-- <span class="cancel">
+                <svg xmlns="http://www.w3.org/2000/svg" id="xmark" height="1em"
+                    viewBox="0 0 512 512">                    <path
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+                </svg>
+            </span> -->
+        </form>
+    </div>
+    <!-- End sign in form -->
+
+    <!-- This is signUp form -->
+    <div class="form2 container bg-white">
+        <form class="sign-up">
+            <div>
+                <h2 style="text-align:center;text-decoration:underline;color:rgb(0, 34, 255)">Sign Up</h2>
+            </div>
+            <div class="form-group pb-4">
+                <label for="fname">First Name:</label width="100%"><br>
+                <input type="text" placeholder="Enter your First Name" id="fname" class="form-control">
+                <div class="error"></div>
+            </div>
+            <div class="form-group pb-4">
+                <label for="lname">Last Name:</label width="100%"><br>
+                <input type="text" placeholder="Enter your Last Name" id="lname" class="form-control">
+                <div class="error"></div>
+            </div>
+            <div class="form-group pb-4">
+                <label for="number">Mobile No:</label width="100%"><br>
+                <input type="number" placeholder="Enter Your mobile number" id="number" class="form-control">
+                <div class="error"></div>
+            </div>
+
+            <div class="form-group pb-4">
+                <label for="pass">Password:</label width="100%"><br>
+                <input type="password" placeholder="Enter Your Password" id="pass" class="form-control">
+                <div class="error"></div>
+            </div>
+
+            <div class="form-group pb-4">
+                <label for="cpass">Confirm Password:</label width="100%"><br>
+                <input type="password" placeholder="Re-Enter Your Password" id="cpass" class="form-control">
+                <div class="error"></div>
+            </div>
+            <div class="pb-4 text-center">
+                <button class="btn btn-danger" type="submit">Submit</button>
+            </div>
+
+            <div>
+                <ul class="nav">
+                    <li>Already a user ?</li>
+                    <li><a href="#" class="signin">Sign in</a></li>
+                </ul>
+
+                <!-- <span class="cancel">
+              <svg xmlns="http://www.w3.org/2000/svg" id="xmark2" height="1em"
+                  viewBox="0 0 512 512">
+                  <path
+                      d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+              </svg>
+          </span> -->
+            </div>
+        </form>
+    </div>
+    <!-- End of sign Up form -->
+
+    <!-- This is cart-details -->
+    <section class="container col-lg-12 " id="cart">
+        <table class="table text-center">
+
+            <tr class="border-bottom">
+                <td>
+                    <img src="./images/3576506_65968.jpg" width="100px">
+
+                </td>
+                <td>
+                    <h4>Product Details</h4>
+                    <p>Mobile Phone</p>
+                </td>
+                <td>
+                    <h4>Qty:1</h3>
+                        <div class="Qty w-100">
+                            <input class="quantity" disabled type="text" value="0" maxlength="2">
+                            <span class="plus btn btn-outline-dark">+</span>
+                            <span class="minus btn btn-outline-dark">-</span>
+                        </div>
+                </td>
+                <td>
+                    <a href="" class="btn btn-primary">Purchase</a>
+                    <br><a href="" class="mt-3 btn btn-danger">Remove</a>
+
+                </td>
+            </tr>
+        </table>
+    </section>
+    <!--End of cart-details -->
+
+   
+    
+    <script src="./cart.js"> </script>
+</body>
+
+</html>

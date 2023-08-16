@@ -1,0 +1,773 @@
+.header {
+    padding: 10px 0;
+
+}
+
+.header h3 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar {
+    position: relative;
+}
+
+header .link {
+    color: #fff;
+    fill: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform ease-out 100ms 10ms;
+}
+
+.remove-link {
+    color: aqua;
+    fill: aqua;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform ease-out 100ms 10ms;
+    transform: scale(1.1);
+}
+
+header .nav li:hover a,
+header .nav li:hover svg {
+    fill: aqua;
+    color: aqua;
+    transform: scale(1.1);
+}
+
+nav ul li {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+nav .nav-link:hover {
+    color: #000;
+}
+
+.search-bar>svg {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    fill: rgb(0, 136, 255);
+    cursor: pointer;
+}
+
+.Qty {
+    position: relative;
+    font-size: large;
+    font-weight: 600;
+}
+
+.Qty input {
+    width: 30px;
+    text-align: center;
+}
+
+.plus {
+    position: absolute;
+    right: 0px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.minus {
+    position: absolute;
+    left: 0px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+#cart {
+    display: none;
+}
+
+.form,
+.form2 {
+    display: none;
+}
+.sign-up .err{
+    border:2px solid red;
+}
+.success{
+    border: 2px solid green;
+}
+
+.error{
+    color:red;
+    font-size:15px;
+    margin:2px 0 2px 2px;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+}
+
+.slider-image {
+    display: none;
+}
+
+.btn1 {
+    position: absolute;
+    z-index: 2;
+    left: 180px;
+    bottom:10px;
+    border: none;
+    border-radius:10px;
+    padding:5px 20px;
+    background-color: rgb(0, 255, 255);
+    font-size:3.5vh;
+    transition: all ease-out 100ms 100ms;
+}
+
+
+.btn2 {
+    position: absolute;
+    z-index: 2;
+    right: 250px;
+    bottom: 100px;
+    border: none;
+    border-radius:10px;
+    padding: 10px 20px;
+    background-color: brown;
+    font-size: 3.5vh;
+    color: #fff;
+    transition: all ease-out 100ms 10ms;
+}
+
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left: 150px;
+    bottom: 30px;
+    border: none;
+    border-radius:10px;
+    padding:5px 20px;
+    background-color: green;
+    font-size:3.5vh;
+    color: #ffffff;
+    transition: all ease-out 100ms 10ms;
+}
+
+.btn1:hover {
+    background-color: rgb(0, 131, 131);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn2:hover {
+    background-color: rgb(182, 0, 0);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn3:hover {
+    background-color: rgb(0, 62, 0);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-div {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.active,
+.dot:hover {
+    background-color: #fff;
+}
+
+.fader {
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+}
+.btn{
+    font-size: inherit;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.deals-svg {
+    position: absolute;
+    top: 13%;
+    left: 60%;
+    animation: time ease-in 1000ms forwards 100ms infinite;
+    fill: #fff;
+    height: 3rem;
+}
+
+@keyframes time {
+    0% 
+    {
+        transform: rotateZ(0);
+    }
+
+    100%
+     {
+        transform: rotateZ(180deg);
+    }
+}
+#contents
+{
+   height:150px;
+   width: 100%;
+   text-align: center;
+   
+}
+#contents a{
+text-decoration: none;
+
+}
+#contents img{
+   width:140px;
+   height: 140px;
+   border-radius: 10px;
+}
+#contents div:hover{
+   transform: translateY(-3vh);
+   transition: transform ease 100ms 10ms;
+}
+footer{
+    color:grey;
+}
+footer h5{
+    font-size: large;
+    color:rgb(255, 255, 255)
+}
+footer .btn{
+   color:grey;
+}
+
+@media only screen and (max-width:1000px){
+    .btn1{
+    left:120px;
+    bottom:5px;
+    border: none;
+    padding:5px 20px; 
+    font-size:2.5vh; 
+    }
+
+    .btn2 {
+    right:170px;
+    bottom:80px;
+    border: none;
+    padding:5px 20px;
+    background-color: brown;
+    font-size:2.5vh;
+}
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left:100px;
+    bottom:10px;
+    padding:5px 20px;
+    font-size:2.5vh;
+  
+}
+.header{
+    font-size:2.8vh;
+}
+header .nav li svg{
+    height:2.8vh;
+}
+.navbar-brand{
+    font-size:3.8vh;
+}
+nav{
+    font-size:2.3vh;
+}
+#contents{
+ height:100px;
+ font-size: 2.4vh;
+ text-align: center;
+}
+
+#contents img{
+    width:100px;
+    height:100px;
+}
+.deals h3{
+    font-size:4.3vh;
+}
+.deals h4{
+    font-size:2.8vh;
+}
+footer h5{
+    font-size:3vh;
+    text-align:center;
+}
+footer li,footer .btn{
+    font-size:2.2vw;
+    text-align:initial;
+}
+.deals-svg {
+    top: 15%;
+    left:63%;
+    fill: #fff;
+    height:7vh;
+}
+.dot {
+    height:12px;
+    width:12px;
+    margin: 0 2px;
+}
+.dot-div{
+    bottom:7px;
+}
+}
+@media only screen and (max-width:850px){
+    .btn1{
+    left:100px;
+    bottom:5px;
+    border: none;
+    padding:5px 20px; 
+    font-size:2vh; 
+    }
+
+    .btn2 {
+    right:110px;
+    bottom:60px;
+    border: none;
+    padding:5px 20px;
+    background-color: brown;
+    font-size:2vh;
+}
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left: 75px;
+    bottom:10px;
+    padding:5px 20px;
+    font-size:2vh;
+  
+}
+.header{
+    font-size:2.5vh;
+}
+header .nav li svg{
+    height:2.5vh;
+}
+.navbar-brand{
+    font-size:3.3vh;
+}
+nav{
+    font-size:2.2vh;
+}
+#contents{
+ height:90px;
+ font-size: 2vh;
+ text-align: center;
+}
+#contents a{
+text-decoration: none;
+}
+
+#contents img{
+    width:90px;
+    height:90px;
+}
+.deals h3{
+    font-size:4vh;
+}
+.deals h4{
+    font-size:2.5vh;
+}
+footer h5{
+    font-size:3vh;
+    text-align:center;
+}
+footer li,footer .btn{
+    font-size:2.2vw;
+    text-align:initial;
+}
+.deals-svg {
+    top: 15%;
+    left:63%;
+    fill: #fff;
+    height:6vh;
+}
+.dot {
+    height:10px;
+    width:10px;
+    margin: 0 2px;
+}
+.dot-div{
+    bottom:5px;
+}
+}
+@media only screen and (max-width:750px){
+    .btn1{
+    left:90px;
+    bottom:5px;
+    border: none;
+    padding:5px 20px; 
+    font-size:1.2vh; 
+    }
+
+    .btn2 {
+    right:110px;
+    bottom:50px;
+    border: none;
+    padding:5px 20px;
+    background-color: brown;
+    font-size:1.2vh;
+}
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left: 75px;
+    bottom:10px;
+    padding:5px 20px;
+    font-size:1.2vh;
+  
+}
+.header{
+    font-size:2.2vh;
+}
+header .nav li svg{
+    height:2.2vh;
+}
+.navbar-brand{
+    font-size:3vh;
+}
+nav{
+    font-size:1.4vh;
+}
+#contents{
+ height:70px;
+ font-size: 1.9vh;
+ text-align: center;
+}
+#contents a{
+text-decoration: none;
+}
+
+#contents img{
+    width:70px;
+    height:70px;
+}
+.deals h3,.deals h4{
+    font-size:3vh;
+}
+footer h5{
+    font-size:2.5vh;
+    text-align:center;
+}
+footer li,footer .btn{
+    font-size:2vw;
+    text-align:initial;
+}
+.deals-svg {
+    top: 13%;
+    left:63%;
+    fill: #fff;
+    height:5vh;
+}
+.dot {
+    height:7px;
+    width:7px;
+    margin: 0 2px;
+}
+.dot-div{
+    bottom:5px;
+}
+}
+@media only screen and (max-width:650px){
+    .btn1{
+    left:80px;
+    bottom:5px;
+    border: none;
+    padding:5px 20px; 
+    font-size:1.2vh; 
+    }
+
+    .btn2 {
+    right:110px;
+    bottom:50px;
+    border: none;
+    padding:5px 20px;
+    background-color: brown;
+    font-size:1.2vh;
+}
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left: 70px;
+    bottom:10px;
+    padding:5px 20px;
+    font-size:1.2vh;
+  
+}
+.header{
+    font-size:1.5vh;
+}
+header .nav li svg{
+    height:1.5vh;
+}
+.navbar-brand{
+    font-size:2.2vh;
+}
+nav{
+    font-size: 1.4vh;
+}
+#contents{
+ height:80px;
+ font-size: 1.5vh;
+ text-align: center;
+}
+#contents a{
+text-decoration: none;
+}
+
+#contents img{
+    width:60px;
+    height:60px;
+}
+.deals h3,.deals h4{
+    font-size:3vh;
+}
+footer h5{
+    font-size:2.2vh;
+    text-align:center;
+}
+footer li,footer .btn{
+    font-size:2vw;
+    text-align:initial;
+}
+.deals-svg {
+    top: 13%;
+    left:63%;
+    fill: #fff;
+    height:5vh;
+}
+.dot {
+    height:7px;
+    width:7px;
+    margin: 0 2px;
+}
+.dot-div{
+    bottom:5px;
+}
+}
+@media only screen and (max-width:550px){
+    .btn1{
+    left:60px;
+    bottom:5px;
+    border: none;
+    padding:2px 10px; 
+    font-size:1vh; 
+    }
+
+    .btn2 {
+    right:90px;
+    bottom:30px;
+    border: none;
+    padding:2px 10px;
+    background-color: brown;
+    font-size:1vh;
+}
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left: 50px;
+    bottom:5px;
+    padding:2px 10px;
+    font-size:1vh;
+  
+}
+
+#contents{
+    font-size:1.2vh;
+    height:50px;
+}
+#contents img{
+    width:50px;
+    height:50px;
+    font-size:0.2vh;
+    
+}
+/* *{
+  font-size:1.5vh;
+} */
+.deals{
+    font-size: 2vh;
+}
+.deals h3,.deals h4{
+    font-size:3vh;
+}
+footer h5{
+    font-size: 3vh;
+}
+.deals-svg {
+    top: 13%;
+    left:66%;
+    fill: #fff;
+    height:2.4vh;
+}
+.dot {
+    height:7px;
+
+    width: 7px;
+    margin: 0 2px;
+}
+.dot-div{
+    bottom:2px;
+}
+}
+@media only screen and (max-width:400px){
+    .btn1{
+    left:60px;
+    bottom:5px;
+    border: none;
+    padding:2px 10px; 
+    font-size:1vh; 
+    }
+
+    .btn2 {
+    right:90px;
+    bottom:30px;
+    border: none;
+    padding:2px 10px;
+    background-color: brown;
+    font-size:1vh;
+}
+.btn3 {
+    position: absolute;
+    z-index: 2;
+    left: 50px;
+    bottom:5px;
+    padding:2px 10px;
+    font-size:1vh;
+  
+}
+.header{
+    font-size:1.1vh;
+    padding:2px;
+}
+header .nav li svg{
+    height:1.1vh;
+}
+header .nav .nav-link{
+   padding:5px;
+}
+.navbar-brand{
+    font-size:1.5vh;
+}
+nav{
+    font-size: 0.7vh;
+}
+nav .nav-link{
+    padding:3px 0 0;
+}
+.form-control{
+    height:20px;
+    width:100px;
+    font-size: 1.2vh;
+}
+#contents{
+    font-size:1vh;
+    height:20px;
+}
+#contents img{
+    width:30px;
+    height:30px;
+    
+}
+.btn{
+    font-size: inherit;
+    padding: 2px 5px;
+}
+.deals{
+    font-size:1vh;
+}
+.deals h3{
+    font-size:1.8vh;
+}
+.deals h4{
+    font-size:1.1vh;
+}
+footer h5{
+    font-size:1.3vh;
+}
+footer .btn{
+    font-size: 1vh;
+}
+footer .mail h6{
+    font-size:1.1vh;
+}
+.deals-svg {
+    top: 14%;
+    left:63%;
+    fill: #fff;
+    height:1.5vh;
+}
+.dot {
+    height:4px;
+
+    width: 4px;
+    margin: 0 2px;
+}
+.dot-div{
+    bottom:2px;
+}
+.card img{
+    height:100px;
+    width:100px;
+}
+}
