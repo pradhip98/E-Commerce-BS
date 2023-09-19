@@ -5,30 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js" defer></script>
-    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/jquery-3.6.4.min.js"></script>
-    <link href="./cart.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
+    
     <!-- This is header -->
-    <header class="container-fluid header bg-primary">
-        <div class="d-flex justify-content-around align-items-center">
-            <h3><a href="/cart.html" class="navbar-brand">Brand Name</a></h1>
+    <header class="container-fluid header bg-primary py-3">
+        <div class="flex-wrap d-flex justify-content-around align-items-center">
+            <h3 class="text-center"><a href="/cart.html">Brand Name</a></h3>
                 <div class="search-bar">
                     <input type="text" class="form-control px-lg-5" id="name" placeholder="Search Products"><svg
-                        xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+                        xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512" class="position-absolute r-0">
                         <path
                             d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
                     </svg>
                 </div>
-                <!-- <button data-toggle="collapse" data-target="#pages" class="btn btn-info">
-                    __
-                </button> -->
-                <ul class="nav" id="pages">
-                    <li><a class="nav-link remove-link">Home <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+            
+                <ul class="nav justify-content-around">
+                    <li><a class="nav-link remove-link fs-6">Home <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                                 viewBox="0 0 576 512">
                                 <path
                                     d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
@@ -43,19 +41,20 @@
                                 <path
                                     d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
                             </svg></a></li>
-                    <li><a class="nav-link link">More <svg xmlns="http://www.w3.org/2000/svg" height="15px"
+                    <li><a href="/" class="nav-link link">More <svg xmlns="http://www.w3.org/2000/svg" height="15px"
                                 viewBox="0 0 320 512">
                                 <path
                                     d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
                             </svg></a></li>
                 </ul>
+            
         </div>
     </header>
     <!-- End of header -->
 
    <!--This is nav bar-->
     <nav class="container-fluid bg-light">
-        <ul class="nav justify-content-between container">
+        <ul class="nav justify-content-around container">
             <li><a class="nav-link">Electronics</a></li>
             <li><a class="nav-link">Furniture</a></li>
             <li><a class="nav-link">Mobile</a></li>
@@ -142,7 +141,7 @@
     <section class="deals">
         <div class="row">
             <div class="col-12 text-white mb-2">
-                <div class="bg-danger text-center position-relative py-sm-3 mysm--2">
+                <div class="bg-danger text-center position-relative py-3">
                     <h3 class="me-2">Deals of the Day</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 384 512" class="deals-svg">
                         <path
@@ -151,23 +150,23 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6">
                 <div class="card mb-2">
                     <img src="./images2/Deals/Boom headphone1.jpg" width="100%" height="300px">
                     <div class="pb-md-2">
                         <div class="card-header text-center">
                             <h4>Boom Head Phone</h4>
                         </div>
-                        <ul class="navbar-nav my-md-1 mx-md-4">
-                            <li>Actual Price:Rs.<del>2999</del></li>
-                            <li>Offer Price:Rs.1999</li>
+                        <ul class="navbar-nav my-1 mx-4">
+                            <li class="h6">Actual Price:Rs.<del>2999</del></li>
+                            <li class="h4 text-danger">Offer Price:Rs.1999</li>
                         </ul>
-                        <a class="btn btn-outline-primary">Buy Now</a>
+                        <a class="btn btn-outline-primary w-25 mb-3">Buy Now</a>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="card mb-2">
                     <img src="./images2/Deals/coolingClass1-small.jpg" width="100%" height="300px">
                     <div class="pb-md-2">
@@ -175,74 +174,74 @@
                             <h4>Sunglass</h4>
                         </div>
 
-                        <ul class="navbar-nav my-md-1 mx-md-4">
-                            <li>Actual Price:Rs.<del>999</del></li>
-                            <li>Offer Price:Rs.199</li>
+                        <ul class="navbar-nav my-1 mx-4">
+                            <li class="h6">Actual Price:Rs.<del>999</del></li>
+                            <li class="h4 text-danger">Offer Price:Rs.199</li>
                         </ul>
-                        <a class="btn btn-outline-primary">Buy Now</a>
+                        <a class="btn btn-outline-primary w-25 mb-3">Buy Now</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="card mb-2">
                     <img src="./images2/Deals/smartwatch1-normal.jpg" alt="" width="100%" height="300px">
                     <div class="pb-sm-2">
                         <div class="card-header text-center">
                             <h4>Smart Watch</h4>
                         </div>
-                        <ul class="navbar-nav my-md-1 mx-md-4">
-                            <li>Actual Price:Rs.<del>5999</del></li>
-                            <li>Offer Price:Rs.2999</li>
+                        <ul class="navbar-nav my-1 mx-4">
+                            <li class="h6">Actual Price:Rs.<del>5999</del></li>
+                            <li class="h4 text-danger">Offer Price:Rs.2999</li>
                         </ul>
-                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                        <a class="btn btn-outline-primary w-25 mb-3">Buy Now</a></button>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="card mb-2">
                     <img src="./images2/Deals/sports-shoe2-small.jpg" width="100%" height="300px">
                     <div class="pb-sm-2">
                         <div class="card-header text-center text-center">
                             <h4>Sport shoe</h4>
                         </div>
-                        <ul class="navbar-nav my-md-1 mx-md-4">
-                            <li>Actual Price: Rs.<del>1999</del></li>
-                            <li>Offer Price: Rs.599</li>
+                        <ul class="navbar-nav my-1 mx-4">
+                            <li class="h6">Actual Price: Rs.<del>1999</del></li>
+                            <li class="h4 text-danger">Offer Price: Rs.599</li>
                         </ul>
-                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                        <a class="btn btn-outline-primary w-25 mb-3">Buy Now</a></button>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="card mb-2">
                     <img src="./images2/Deals/tws1.jpg" width="100%" height="300px">
                     <div class="pb-sm-2">
                         <div class="card-header text-center">
                             <h4>True Wireless pods</h4>
                         </div>
-                        <ul class="navbar-nav my-md-1 mx-md-4">
-                            <li>Actual Price:Rs.<del>5499</del></li>
-                            <li>Offer Price:Rs.1499</li>
+                        <ul class="navbar-nav my-1 mx-4">
+                            <li class="h6">Actual Price:Rs.<del>5499</del></li>
+                            <li class="h4 text-danger">Offer Price:Rs.1499</li>
                         </ul>
-                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                        <a class="btn btn-outline-primary w-25 mb-3">Buy Now</a></button>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="card mb-2">
                     <img src="./images2/Deals/woolen-jacket1-small.jpg" width="100%" height="300px">
                     <div class="pb-sm-2">
                         <div class="card-header text-center">
                             <h4>Woolen-jacket</h4>
                         </div>
-                        <ul class="navbar-nav my-md-1 mx-md-4">
-                            <li>Actual Price:Rs.<del>1999</del></li>
-                            <li>Offer Price:Rs.999</li>
+                        <ul class="navbar-nav my-1 mx-4">
+                            <li class="h6">Actual Price:Rs.<del>1999</del></li>
+                            <li class="h4 text-danger">Offer Price:Rs.999</li>
                         </ul>
-                        <a class="btn btn-outline-primary">Buy Now</a></button>
+                        <a class="btn btn-outline-primary w-25 mb-3">Buy Now</a></button>
                     </div>
                 </div>
             </div>
@@ -251,50 +250,50 @@
     <!-- End of Deals Section -->
 
     <!-- This is footer -->
-    <footer class="bg-dark text-center">
+    <footer class="bg-dark">
         <div class="row mx-5">
-            <div class="col-sm-4 col-3 my-sm-3 my-2">
-                <h5>ABOUT</h5>
-                <ul class="">
-                    <li><a href="" class="btn">Contact Us</a></li>
-                    <li><a href="" class="btn">About Us</a></li>
-                    <li><a href="" class="btn">Corporate Information</a></li>
+            <div class="col-sm-6 col-md-4 my-sm-3 my-2">
+                <h3 class="text-white h6 text-center">ABOUT</h3>
+                <ul class="navbar-nav">
+                    <li class="text-center">Contact Us</li>
+                    <li class="text-center">About Us</li>
+                    <li class="text-center">Corporate Information</li>
                 </ul>
             </div>
 
-            <div class="col-sm-4 col-3 my-sm-3 my-2">
-                <h5>HELP</h5>
-                <ul class="">
-                    <li><a href="" class="btn">Payments</a></li>
-                    <li><a href="" class="btn">Shipping</a></li>
-                    <li><a href=""class="btn">Cancellation & Returns</a></li>
-                    <li><a href="" class="btn">FAQ</a></li>
+            <div class="col-sm-6 col-md-4 my-sm-3 my-2">
+                <h3 class="text-white h6 text-center">HELP</h3>
+                <ul class="navbar-nav">
+                    <li class="text-center">Payments</li>
+                    <li class="text-center">Shipping</li>
+                    <li class="text-center">Cancellation & Returns</li>
+                    <li class="text-center">FAQ</li>
                 </ul>
             </div>
 
-            <div class="col-sm-4 col-3 my-sm-3 my-2">
-                <h5>CONSUMER5POLICY</h5>
-                <ul class="">
-                    <li><a href="" class="btn">Cancellation & Returnss</a></li>
-                    <li><a href="" class="btn">Terms of Use</a></li>
-                    <li><a href="" class="btn">Security</a></li>
-                    <li><a href="" class="btn">Privacy</a></li>
+            <div class="col-sm-6 col-md-4 my-sm-3 my-2">
+                <h3 class="text-white h6 text-center">CONSUMER5POLICY</h3>
+                <ul class="navbar-nav">
+                    <li class="text-center">Cancellation & Returnss</a></li>
+                    <li class="text-center">Terms of Use</a></li>
+                    <li class="text-center">Security</a></li>
+                    <li class="text-center">Privacy</a></li>
                 </ul>
             </div>
 
-            <div class="col-sm-4 col-3 my-sm-3 my-2">
-                <h5>SOCIAL</h5>
-                <ul class="">
-                    <li><a href="" class="btn">Facebook</a></li>
-                    <li><a href="" class="btn">Twitter</a></li>
-                    <li><a href="" class="btn">YouTube</a></li>
+            <div class="col-sm-6 col-md-4 my-sm-3 my-2">
+                <h3 class="text-white h6 text-center">SOCIAL</h3>
+                <ul class="navbar-nav">
+                    <li class="text-center">Facebook</a></li>
+                    <li class="text-center">Twitter</a></li>
+                    <li class="text-center">YouTube</a></li>
                 </ul>
             </div>
             
-            <div class="col-sm-4 col-3 my-sm-3 my-2">
-                <h5>Mail Us:</h5>
-                <ul class="">
-                    <li>Brand Name limited,<br>
+            <div class="col-sm-6 col-md-4 my-sm-3 my-2">
+                <h3 class="text-white h6 text-center">Mail Us:</h3>
+                <ul class="navbar-nav">
+                    <li class="text-center">Brand Name limited,<br>
                         building Name,<br>
                         Town Name,<br>
                         Distict Name,Pincode,<br>
@@ -303,10 +302,10 @@
                 </ul>
             </div>
 
-            <div class="col-sm-4 col-3 my-sm-3 my-2">
-                <h5>Registerd office address</h5>
-                <ul class="">
-                    <li>Brand Name limited,<br>
+            <div class="col-sm-6 col-md-4 my-sm-3 my-2">
+                <h3 class="text-white h6 text-center">Registerd office address</h3>
+                <ul class="navbar-nav">
+                    <li class="text-center">Brand Name limited,<br>
                         building Name,<br>
                         Town Name,<br>
                         Distict Name,Pincode,<br>
@@ -317,7 +316,7 @@
             </div>
         </div>
         <hr>
-        <div class="pb-3 mail">
+        <div class="pb-3 text-center">
             <h6>2020-2025 brandname.com</h6>
         </div>
     </footer>
@@ -441,8 +440,8 @@
                         </div>
                 </td>
                 <td>
-                    <a href="" class="btn btn-primary">Purchase</a>
-                    <br><a href="" class="mt-3 btn btn-danger">Remove</a>
+                    <a href="#" class="btn btn-primary">Purchase</a>
+                    <br><a href="#" class="mt-3 btn btn-danger">Remove</a>
 
                 </td>
             </tr>
@@ -452,7 +451,7 @@
 
    
     
-    <script src="./cart.js"> </script>
+    
 </body>
 
 </html>

@@ -58,7 +58,7 @@ for (let i = 0; i < navLink.length; i++) {
             form2.style.display = `none`;
             home.style.display = `none`;
         }
-        console.log(arr)
+        // console.log(arr)
     })
 }
 

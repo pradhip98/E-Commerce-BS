@@ -1,7 +1,6 @@
-.header {
+/* .header {
     padding: 10px 0;
-
-}
+} */
 
 .header h3 a {
     color: #fff;
@@ -21,7 +20,7 @@ header .link {
     transition: transform ease-out 100ms 10ms;
 }
 
-.remove-link {
+header .remove-link {
     color: aqua;
     fill: aqua;
     text-decoration: none;
@@ -356,11 +355,11 @@ footer li,footer .btn{
     font-size:2.2vw;
     text-align:initial;
 }
-.deals-svg {
-    top: 15%;
-    left:63%;
+.deals svg {
+    top: 20%;
+    left:66%;
     fill: #fff;
-    height:7vh;
+    height:4vh;
 }
 .dot {
     height:12px;
@@ -397,12 +396,7 @@ footer li,footer .btn{
     font-size:2vh;
   
 }
-.header{
-    font-size:2.5vh;
-}
-header .nav li svg{
-    height:2.5vh;
-}
+
 .navbar-brand{
     font-size:3.3vh;
 }
@@ -477,12 +471,7 @@ footer li,footer .btn{
     font-size:1.2vh;
   
 }
-.header{
-    font-size:2.2vh;
-}
-header .nav li svg{
-    height:2.2vh;
-}
+
 .navbar-brand{
     font-size:3vh;
 }
@@ -554,12 +543,7 @@ footer li,footer .btn{
     font-size:1.2vh;
   
 }
-.header{
-    font-size:1.5vh;
-}
-header .nav li svg{
-    height:1.5vh;
-}
+
 .navbar-brand{
     font-size:2.2vh;
 }
